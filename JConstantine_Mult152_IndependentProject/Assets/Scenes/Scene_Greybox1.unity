@@ -3012,7 +3012,7 @@ GameObject:
   - component: {fileID: 320649550}
   - component: {fileID: 320649549}
   - component: {fileID: 320649548}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3710,7 +3710,7 @@ GameObject:
   - component: {fileID: 417859240}
   - component: {fileID: 417859239}
   - component: {fileID: 417859238}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9311,7 +9311,7 @@ GameObject:
   - component: {fileID: 1268341695}
   - component: {fileID: 1268341694}
   - component: {fileID: 1268341693}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10285,7 +10285,7 @@ GameObject:
   - component: {fileID: 1357413268}
   - component: {fileID: 1357413267}
   - component: {fileID: 1357413266}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12337,7 +12337,7 @@ GameObject:
   - component: {fileID: 1628202643}
   - component: {fileID: 1628202642}
   - component: {fileID: 1628202641}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12573,7 +12573,7 @@ GameObject:
   - component: {fileID: 1691311403}
   - component: {fileID: 1691311402}
   - component: {fileID: 1691311401}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15962,7 +15962,7 @@ PrefabInstance:
     - target: {fileID: 7777961581247409527, guid: 205d8766bc2e07d47b8e2970e39d820c,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7777961581247409533, guid: 205d8766bc2e07d47b8e2970e39d820c,
         type: 3}
