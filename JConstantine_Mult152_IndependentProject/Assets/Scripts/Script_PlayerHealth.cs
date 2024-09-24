@@ -28,14 +28,14 @@ public class Script_PlayerHealth : MonoBehaviour
         if (health <= 1)
         {
             print("DEAD");
-            transform.Translate(Vector3.right * 75 * Time.deltaTime);
-            transform.Translate(Vector3.up * 10 * Time.deltaTime);
+            transform.Translate(Vector3.right * 85 * Time.deltaTime);
+            transform.Translate(Vector3.up * 15 * Time.deltaTime);
         }
         else if (health > 1)
         {
             health = health - 1f;
-            transform.Translate( Vector3.right * 75 * Time.deltaTime);
-            transform.Translate(Vector3.up * 10 * Time.deltaTime);
+            transform.Translate( Vector3.right * 85 * Time.deltaTime);
+            transform.Translate(Vector3.up * 15 * Time.deltaTime);
         }
     }
     private void OnTriggerExit(Collider enemy)
