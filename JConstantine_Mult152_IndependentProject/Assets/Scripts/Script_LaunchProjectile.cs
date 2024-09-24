@@ -22,7 +22,10 @@ public class Script_LaunchProjectile : MonoBehaviour
         {
             GameObject blast = Instantiate(projectile, transform.position, transform.rotation);
             blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (-launchVelocity, 10, 0));
+            Destroy(blast, 2);
+            print("PEW");
         }
 
     }
+
 }

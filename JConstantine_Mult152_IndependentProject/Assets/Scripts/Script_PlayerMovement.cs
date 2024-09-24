@@ -51,7 +51,7 @@ public class Script_PlayerMovement : MonoBehaviour
         // Strafe motion
         transform.Translate(Vector3.forward *  Time.deltaTime * playerSpeed * horizontalInput );
         // Player Rotation
-        transform.Rotate(Vector3.up * Time.deltaTime * xPos * camSpeed);
+        transform.Rotate(Vector3.up * Time.deltaTime * xPos * camSpeed / 2);
 
         // Jump Timer Checks
         if (Input.GetButtonDown("Jump"))
