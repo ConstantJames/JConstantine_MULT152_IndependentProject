@@ -6,13 +6,13 @@ public class Script_LaunchProjectile : MonoBehaviour
 {
 
     public GameObject projectile;
-    public float launchVelocity = 3000f;
+    public float launchVelocity = 2500f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Script_LaunchProjectile : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject blast = Instantiate(projectile, transform.position, transform.rotation);
-            blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (-launchVelocity, 10, 0));
+            blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 30, launchVelocity));
             Destroy(blast, 2);
             print("PEW");
         }

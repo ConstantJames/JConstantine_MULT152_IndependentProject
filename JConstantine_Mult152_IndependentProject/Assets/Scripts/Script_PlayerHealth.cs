@@ -6,7 +6,9 @@ public class Script_PlayerHealth : MonoBehaviour
 {
     public float health = 10f;
     public float maxHealth = 10f;
+    public float amount;
     public GameObject [] enemy;
+
     
 
 
@@ -14,36 +16,56 @@ public class Script_PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if ( health >= maxHealth)
+        {
+            health = maxHealth;
+        }
     }
 
-    private void OnTriggerEnter(Collider enemy)
+    private void OnTriggerEnter(Collider other)
     {
 
-        if (health <= 1)
+        if (other.gameObject.CompareTag("Ouch"))
+        {
+            print("WORKING");
+        }
+
+        if (health <= 1 && other.gameObject.CompareTag("Ouch"))
         {
             print("DEAD");
             transform.Translate(Vector3.right * 85 * Time.deltaTime);
             transform.Translate(Vector3.up * 15 * Time.deltaTime);
+            Destroy(other.gameObject);
+
         }
-        else if (health > 1)
+        else if (health > 1 && other.gameObject.CompareTag("Ouch"))
         {
-            health = health - 1f;
+            health--;
             transform.Translate( Vector3.right * 85 * Time.deltaTime);
             transform.Translate(Vector3.up * 15 * Time.deltaTime);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Health"))
+        {
+            float amount = Random.Range(1, 3);
+            print(amount);
+            health = amount + health;
+            Destroy(other.gameObject);
         }
     }
-    private void OnTriggerExit(Collider enemy)
+    private void OnTriggerExit(Collider other)
     {
-        if (health >= 1) 
+        if (health >= 1 && other.gameObject.CompareTag("Ouch")) 
         {
             print("PLAYER: "+ health);
         }
+       
     }
 
 }

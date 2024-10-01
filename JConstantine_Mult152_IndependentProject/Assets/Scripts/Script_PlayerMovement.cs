@@ -47,9 +47,9 @@ public class Script_PlayerMovement : MonoBehaviour
         xPos = Input.GetAxis("Mouse X");
 
         // Forward motion
-        transform.Translate(Vector3.left * Time.deltaTime * playerSpeed * verticalInput );
+        transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed * verticalInput );
         // Strafe motion
-        transform.Translate(Vector3.forward *  Time.deltaTime * playerSpeed * horizontalInput );
+        transform.Translate(Vector3.right *  Time.deltaTime * playerSpeed * horizontalInput );
         // Player Rotation
         transform.Rotate(Vector3.up * Time.deltaTime * xPos * camSpeed / 2);
 
@@ -78,8 +78,8 @@ public class Script_PlayerMovement : MonoBehaviour
     if (rolling)
         {
             rollTime += Time.deltaTime;
-            transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed * horizontalInput * 3);
-            transform.Translate(Vector3.left * Time.deltaTime * playerSpeed * verticalInput * 3);
+            transform.Translate(Vector3.right * Time.deltaTime * playerSpeed * horizontalInput * 3);
+            transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed * verticalInput * 3);
         }
     if (Input.GetKeyUp("left shift")  |  rollTime > rollButton) 
         {

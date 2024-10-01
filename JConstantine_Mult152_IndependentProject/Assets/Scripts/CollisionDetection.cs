@@ -11,9 +11,10 @@ public class CollisionDetection : MonoBehaviour
     public void Start()
     {
         enemyHealth = 4;
+        Physics.IgnoreLayerCollision(1, 6);
     }
 
-    private void OnTriggerExit(Collider projectile)
+    private void OnTriggerExit(Collider other)
     {
 
         if (enemyHealth <= 1)
@@ -29,7 +30,13 @@ public class CollisionDetection : MonoBehaviour
             }
 
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            enemyHealth++;
+        }
+    }
     void Damage()
     {
         enemyHealth--;

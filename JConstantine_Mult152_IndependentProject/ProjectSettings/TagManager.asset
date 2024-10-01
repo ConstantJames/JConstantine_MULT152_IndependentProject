@@ -3,15 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Projectile
+  - Enemy
+  - Ouch
+  - Health
+  - Unlock
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Looking
   - Water
   - UI
-  - 
+  - EnemyShoot
   - 
   - 
   - 
