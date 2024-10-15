@@ -8,18 +8,20 @@ public class Script_EnemyHealth : MonoBehaviour
     public int eHealth = 4;
     public GameObject aimingPart;
     public GameObject healthPickup;
+    Animator animator;
 
 
     // Start is called before the first frame update
     void Start()
     {
         eHealth = 4;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +32,7 @@ public class Script_EnemyHealth : MonoBehaviour
             print(eHealth);
             Destroy(other.gameObject);
             print(GetComponent<Collider>());
+            animator.Play("Hit");
         }
         else if (other.gameObject.CompareTag("Projectile") && eHealth <= 1)
         {
@@ -38,7 +41,8 @@ public class Script_EnemyHealth : MonoBehaviour
             Destroy(gameObject);
             Destroy(aimingPart);
             HealthSpawn();
-            
+            animator.Play("Hit");
+
         }
         else
         {
@@ -47,6 +51,7 @@ public class Script_EnemyHealth : MonoBehaviour
     }
     private void HealthSpawn()
     {
-       healthPickup = Instantiate(healthPickup, transform.position, transform.rotation );
+       healthPickup = Instantiate(healthPickup, transform.position , transform.rotation );
     }
+
 }

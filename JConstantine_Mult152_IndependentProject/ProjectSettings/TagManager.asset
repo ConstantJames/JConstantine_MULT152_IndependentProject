@@ -9,6 +9,7 @@ TagManager:
   - Ouch
   - Health
   - Unlock
+  - Ground
   layers:
   - Default
   - TransparentFX
