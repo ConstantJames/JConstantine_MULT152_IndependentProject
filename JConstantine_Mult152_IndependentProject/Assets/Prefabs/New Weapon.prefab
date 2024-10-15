@@ -178,6 +178,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unlock Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 4206031179044431841, guid: 6c1a4a5f29c923740b32ed6ee95656b1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206031179044431841, guid: 6c1a4a5f29c923740b32ed6ee95656b1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.90783
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206031179044431841, guid: 6c1a4a5f29c923740b32ed6ee95656b1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206031179044431841, guid: 6c1a4a5f29c923740b32ed6ee95656b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194393672126311444, guid: 6c1a4a5f29c923740b32ed6ee95656b1,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1a4a5f29c923740b32ed6ee95656b1, type: 3}
 --- !u!4 &806819397101888578 stripped
