@@ -9,6 +9,9 @@ public class Script_LaunchProjectile : MonoBehaviour
     public float launchVelocity = 2500f;
     public GameManager gameManager;
     private bool gameOver;
+    public AudioClip pew;
+    public AudioSource audioSource;
+    public float volume = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,8 @@ public class Script_LaunchProjectile : MonoBehaviour
                 blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 30, launchVelocity));
                 Destroy(blast, 2);
                 print("PEW");
+                audioSource.PlayOneShot( pew, volume);
+                
             }
         }
     }

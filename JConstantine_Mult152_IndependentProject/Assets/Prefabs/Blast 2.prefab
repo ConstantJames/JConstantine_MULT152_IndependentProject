@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 17485105118000593}
   - component: {fileID: 1869950880860879597}
   - component: {fileID: 7770642782329981521}
+  - component: {fileID: 8720804519983255805}
   m_Layer: 0
   m_Name: Blast 2
   m_TagString: Projectile
@@ -115,6 +116,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8720804519983255805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914777376125328117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fc8e861c41a8047a4a2c39b6de4d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3760102041939952577
 GameObject:
   m_ObjectHideFlags: 0

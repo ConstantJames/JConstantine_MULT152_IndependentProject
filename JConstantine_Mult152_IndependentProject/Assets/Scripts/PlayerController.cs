@@ -39,6 +39,12 @@ public class PlayerController : MonoBehaviour
     //RigidBody
     private Rigidbody rbPlayer;
 
+    //sound
+    public AudioClip boing;
+    public AudioClip swoosh;
+    public AudioSource audioSource;
+    public float volume = 0.5f;
+
     GameManager manager;
 
     // Start is called before the first frame update
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             rbPlayer.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
+            audioSource.PlayOneShot(boing, volume);
         }
 
         //Dodge roll
@@ -80,13 +87,14 @@ public class PlayerController : MonoBehaviour
         {
                 rolling = true;
                 rollTime = 0;
+            audioSource.PlayOneShot( swoosh, volume);
                 
         }
     if (rolling)
         {
             rollTime += Time.deltaTime;
-            transform.Translate(Vector3.forward * Time.deltaTime * rollForce * verticalInput * 3);
-            transform.Translate(Vector3.right * Time.deltaTime * rollForce * horizontalInput * 3);
+            rbPlayer.AddRelativeForce(Vector3.forward * Time.deltaTime * rollForce * verticalInput * 3, ForceMode.VelocityChange);
+            rbPlayer.AddRelativeForce(Vector3.right * Time.deltaTime * rollForce * horizontalInput * 3, ForceMode.VelocityChange);
         }
     if (Input.GetKeyUp("left shift")  |  rollTime > rollButton) 
         {

@@ -9,6 +9,9 @@ public class Script_Weapon2 : MonoBehaviour
     public float launchVelocity = 1400f;
     public GameManager gameManager;
     private bool gameOver;
+    public AudioClip pew;
+    public AudioSource audioSource;
+    public float volume = 0.5f;
 
 
     // Start is called before the first frame update
@@ -36,6 +39,7 @@ public class Script_Weapon2 : MonoBehaviour
                 Destroy(blast2, 1);
                 Destroy(blast3, 1);
                 print("BANG");
+                audioSource.PlayOneShot(pew, volume);
             }
         }
 

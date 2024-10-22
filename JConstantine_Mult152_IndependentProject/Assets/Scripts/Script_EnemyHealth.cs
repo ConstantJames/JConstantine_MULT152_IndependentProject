@@ -10,6 +10,9 @@ public class Script_EnemyHealth : MonoBehaviour
     public GameObject healthPickup;
     Animator animator;
 
+    public AudioClip slime;
+    public AudioSource audioSource;
+    public float volume = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +36,7 @@ public class Script_EnemyHealth : MonoBehaviour
             Destroy(other.gameObject);
             print(GetComponent<Collider>());
             animator.Play("Hit");
+            audioSource.PlayOneShot(slime, volume);
         }
         else if (other.gameObject.CompareTag("Projectile") && eHealth <= 1)
         {
@@ -42,7 +46,7 @@ public class Script_EnemyHealth : MonoBehaviour
             Destroy(aimingPart);
             HealthSpawn();
             animator.Play("Hit");
-
+            audioSource.PlayOneShot(slime, volume);
         }
         else
         {

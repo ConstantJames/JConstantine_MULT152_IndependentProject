@@ -60,7 +60,7 @@ public class Script_EnemyAim : MonoBehaviour
         if (fire == true)
         {
             GameObject blast = Instantiate(enemyProjectile, transform.position, transform.rotation);
-            blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 200, launchVelocity));
+            blast.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 350, launchVelocity));
             Destroy(blast, 1);
             count++;
             animator.Play("Attack");
