@@ -9,6 +9,8 @@ public class Script_PlayerHealth : MonoBehaviour
     public float amount;
     public GameObject [] enemy;
     public GameManager gameManager;
+    Animator animator;
+
 
     
 
@@ -17,7 +19,7 @@ public class Script_PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class Script_PlayerHealth : MonoBehaviour
             transform.Translate(Vector3.up * 15 * Time.deltaTime);
             Destroy(other.gameObject);
             gameManager.gameOver = true;
+            animator.Play("Ouch");
 
 
         }
@@ -54,6 +57,7 @@ public class Script_PlayerHealth : MonoBehaviour
             transform.Translate( Vector3.back * 85 * Time.deltaTime);
             transform.Translate(Vector3.up * 15 * Time.deltaTime);
             Destroy(other.gameObject);
+            animator.Play("Ouch");
 
         }
         if (other.gameObject.CompareTag("Health"))
