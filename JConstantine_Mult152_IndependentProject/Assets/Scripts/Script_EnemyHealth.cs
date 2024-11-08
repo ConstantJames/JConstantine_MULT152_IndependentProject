@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Script_EnemyHealth : MonoBehaviour
@@ -13,20 +11,29 @@ public class Script_EnemyHealth : MonoBehaviour
     public AudioClip slime;
     public AudioSource audioSource;
     public float volume = 0.5f;
+    public bool safety = false;
+    public bool gameOverCheck;
+    GameManager gameManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
         eHealth = 4;
         animator = GetComponent<Animator>();
+        gameManager = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        gameOverCheck = GameObject.Find("GameManager").GetComponent<GameManager>().gameOver;
 
+        if (gameOverCheck == true)
+        {
+            animator.enabled = false;
+        }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Projectile") && eHealth >= 1)
@@ -40,13 +47,17 @@ public class Script_EnemyHealth : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Projectile") && eHealth <= 1)
         {
-            print("DEAD");
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-            Destroy(aimingPart);
-            HealthSpawn();
+            if (safety == false)
+            {
+                print("DEAD");
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+                Destroy(aimingPart);
+                HealthSpawn();
+            }
             animator.Play("Hit");
             audioSource.PlayOneShot(slime, volume);
+
         }
         else
         {
@@ -57,5 +68,5 @@ public class Script_EnemyHealth : MonoBehaviour
     {
        healthPickup = Instantiate(healthPickup, transform.position , transform.rotation );
     }
-
+    
 }

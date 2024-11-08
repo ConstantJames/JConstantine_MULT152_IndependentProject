@@ -9,7 +9,7 @@ public class Script_PlayerHealth : MonoBehaviour
     public float amount;
     public GameObject [] enemy;
     public GameManager gameManager;
-
+    private Animator animator;
     
 
 
@@ -17,7 +17,7 @@ public class Script_PlayerHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,6 +26,10 @@ public class Script_PlayerHealth : MonoBehaviour
         if ( health >= maxHealth)
         {
             health = maxHealth;
+        }
+        if (gameManager.gameOver == true)
+        {
+            animator.SetBool("Dead", true);
         }
     }
 
@@ -41,19 +45,16 @@ public class Script_PlayerHealth : MonoBehaviour
         if (health <= 1 && other.gameObject.CompareTag("Ouch"))
         {
             print("DEAD");
-            transform.Translate(Vector3.back * 85 * Time.deltaTime);
-            transform.Translate(Vector3.up * 15 * Time.deltaTime);
             Destroy(other.gameObject);
             gameManager.gameOver = true;
-
+            animator.Play("Dead");
 
         }
         else if (health > 1 && other.gameObject.CompareTag("Ouch"))
         {
             health--;
-            transform.Translate( Vector3.back * 85 * Time.deltaTime);
-            transform.Translate(Vector3.up * 15 * Time.deltaTime);
             Destroy(other.gameObject);
+            animator.Play("Ouch");
 
         }
         if (other.gameObject.CompareTag("Health"))
@@ -69,7 +70,7 @@ public class Script_PlayerHealth : MonoBehaviour
         if (health >= 1 && other.gameObject.CompareTag("Ouch")) 
         {
             print("PLAYER: "+ health);
-
+            
         }
        
     }

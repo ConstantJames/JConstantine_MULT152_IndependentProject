@@ -14,14 +14,16 @@ public class Script_EnemyAim : MonoBehaviour
     public GameObject range;
     Animator animator;
     private float playerHealth;
+    GameManager gameManager;
+    public GameObject body;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("PlayerInRange", 2, 3);
         animator = GameObject.Find("SlimeMesh").GetComponent<Animator>();
         playerHealth = 10.0f;
+        animator = body.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,14 +35,22 @@ public class Script_EnemyAim : MonoBehaviour
     {
         print("In range");
 
-       playerHealth = GameObject.Find("Player_Wiz").GetComponent<Script_PlayerHealth>().health;
+       playerHealth = GameObject.Find("Player").GetComponent<Script_PlayerHealth>().health;
+        animator = body.GetComponent<Animator>();
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            InvokeRepeating("PlayerInRange", 1, 3);
+        }
 
     }
     private void OnTriggerStay(Collider other)
     {
+        playerHealth = GameObject.Find("Player").GetComponent<Script_PlayerHealth>().health;
+
         if (other.gameObject.CompareTag("Player"))
         {
-            playerPos = playerTarget.transform.position;
+            playerPos = other.gameObject.transform.position;
             transform.LookAt(playerPos);
             fire = true;
         }
@@ -70,4 +80,5 @@ public class Script_EnemyAim : MonoBehaviour
     {
         CancelInvoke("PlayerInRange");
     }
+
 }

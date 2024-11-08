@@ -12,33 +12,29 @@ public class GameManager : MonoBehaviour
     private PlayerController playerCtrl;
     private Animator playerAnimator;
     private float playerHealth;
-    bool ouch;
-    
-    
-    
+    private GameObject walls;
+    private int enemyCount;
+
     // Start is called before the first frame update
     void Start()
     {
-        playerCtrl = GameObject.Find("Player_Wiz").GetComponent<PlayerController>();
+        playerCtrl = GameObject.Find("Player").GetComponent<PlayerController>();
         gameOver = false;
-        playerHealth = GameObject.Find("Player_Wiz").GetComponent<Script_PlayerHealth>().health;
-        ouch = GameObject.Find("Player_Wiz").GetComponent<Animator>().GetBool("Ouch");
+        playerHealth = GameObject.Find("Player").GetComponent<Script_PlayerHealth>().health;
+        playerAnimator = GameObject.Find("Player").GetComponent<Animator>();
+        walls = GameObject.Find("MagicDoors");
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerHealth = GameObject.Find("Player_Wiz").GetComponent<Script_PlayerHealth>().health;
+        playerHealth = GameObject.Find("Player").GetComponent<Script_PlayerHealth>().health;
+        enemyCount = FindObjectsOfType<Script_EnemyHealth>().Length;
 
         if (playerHealth <= 1)
         {
             gameOver = true;
             GameOver();
-        }
-        if (ouch == true) 
-        {
-           playerAnimator = playerCtrl.GetComponent<Animator>();
-            playerAnimator.Play("Ouch");
         }
     }
     void GameOver()
@@ -46,6 +42,7 @@ public class GameManager : MonoBehaviour
         enemy.GetComponent<Script_EnemyAim>().enabled = false;
 
        //Player Disable
-        GameObject.Find("Player_Wiz").GetComponent<PlayerController>().enabled = false;
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+        
     }
 }
