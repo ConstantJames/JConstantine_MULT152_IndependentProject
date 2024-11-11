@@ -18,6 +18,7 @@ public class Script_EnemyWaves : MonoBehaviour
     bool firstTime = false;
     int maxWaves = 4;
     GameObject walls;
+    GameObject portal;
 
 
     // Start is called before the first frame update
@@ -25,7 +26,8 @@ public class Script_EnemyWaves : MonoBehaviour
     {
         spawnArea = GetComponent<Collider>();
         walls = GameObject.Find("MagicDoors");
-        walls.SetActive(false);
+        portal = GameObject.Find("RepeatPortal");
+
     }
 
     void SpawnWave(int enemyNum)
@@ -91,5 +93,6 @@ public class Script_EnemyWaves : MonoBehaviour
     {
         Debug.Log("Waves Over");
         walls.SetActive(false);
+        portal.SetActive(true);
     }
 }

@@ -16,6 +16,7 @@ public class Script_EnemyAim : MonoBehaviour
     private float playerHealth;
     GameManager gameManager;
     public GameObject body;
+    public int health;
 
 
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class Script_EnemyAim : MonoBehaviour
         animator = GameObject.Find("SlimeMesh").GetComponent<Animator>();
         playerHealth = 10.0f;
         animator = body.GetComponent<Animator>();
+        health = GameObject.Find("SlimeMesh").GetComponent<Script_EnemyHealth>().eHealth;
     }
 
     // Update is called once per frame
