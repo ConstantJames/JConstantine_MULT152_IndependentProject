@@ -12,10 +12,11 @@ public class Script_WeaponPicker : MonoBehaviour
     public bool unlock = false;
     public GameManager gameManager;
     private bool gameOver;
+    private GameObject walls;
 
     void Start()
     {
-
+        walls = GameObject.Find("MagicDoors");
     }
 
     // Update is called once per frame
@@ -56,6 +57,7 @@ public class Script_WeaponPicker : MonoBehaviour
             unlock = true;
             print("NEW SPELL UNLOCKED");
             Destroy(other.gameObject);
+            walls.SetActive(false);
         }
     }
 }

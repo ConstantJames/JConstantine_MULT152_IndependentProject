@@ -10,6 +10,7 @@ TagManager:
   - Health
   - Unlock
   - Ground
+  - Scroll
   layers:
   - Default
   - TransparentFX
