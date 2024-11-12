@@ -13,9 +13,9 @@ public class Script_EnemyWaves : MonoBehaviour
 
     //New Stuff
     public GameObject enemyPrefab;
-    private int waveNum = 0;
+    public int waveNum = 0;
     private int enemyCount;
-    bool firstTime = false;
+    public bool firstTime = false;
     int maxWaves = 4;
     GameObject walls;
     GameObject portal;
@@ -27,7 +27,6 @@ public class Script_EnemyWaves : MonoBehaviour
         spawnArea = GetComponent<Collider>();
         walls = GameObject.Find("MagicDoors");
         portal = GameObject.Find("RepeatPortal");
-
     }
 
     void SpawnWave(int enemyNum)

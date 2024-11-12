@@ -15,11 +15,11 @@ public class script_LevelReset : MonoBehaviour
     public int startEnHealth = 4;
     public GameObject enemyPrefab;
     public int enNewHealth;
+    public GameObject waveMan;
     void Start()
     {
         // Store the player's starting position
         playerStartPosition = player.position;
-
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
@@ -46,6 +46,8 @@ public class script_LevelReset : MonoBehaviour
         numRepeat++;
         gameManager.Repeat(numRepeat);
         enNewHealth = startEnHealth * numRepeat;
+        waveMan.GetComponent<Script_EnemyWaves>().firstTime = false;
+        waveMan.GetComponent<Script_EnemyWaves>().waveNum = 0;
 
         // Enable all objects that were disabled at the start
         foreach (GameObject obj in objectsToEnable)
