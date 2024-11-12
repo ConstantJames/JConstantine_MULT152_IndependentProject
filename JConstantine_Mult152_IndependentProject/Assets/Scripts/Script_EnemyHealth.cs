@@ -58,6 +58,9 @@ public class Script_EnemyHealth : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Projectile") && eHealth <= 1)
         {
+            animator.Play("Hit");
+            audioSource.PlayOneShot(slime, volume);
+
             if (safety == false)
             {
                 print("DEAD");
@@ -68,8 +71,6 @@ public class Script_EnemyHealth : MonoBehaviour
                 firstVisit = false;
 
             }
-            animator.Play("Hit");
-            audioSource.PlayOneShot(slime, volume);
 
         }
         else
