@@ -82,7 +82,6 @@ public class GameManager : MonoBehaviour
 
             print(repeatCount + "Repeat Works");
 
-            FindObjectOfType<Script_EnemyHealth>().HealthUpdate();
             
         }
 

@@ -673,4 +673,4 @@ MonoBehaviour:
   fire: 0
   range: {fileID: 2448039306587429359}
   body: {fileID: 2448039306310211059}
-  health: 0
+  health: 4

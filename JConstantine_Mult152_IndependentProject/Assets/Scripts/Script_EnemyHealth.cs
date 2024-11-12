@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Script_EnemyHealth : MonoBehaviour
@@ -84,9 +86,4 @@ public class Script_EnemyHealth : MonoBehaviour
 
     }
 
-    public void HealthUpdate()
-    {
-        eHealth = sHealth * rCount + 1;
-        print(eHealth + "eHealth");
-    }
 }
