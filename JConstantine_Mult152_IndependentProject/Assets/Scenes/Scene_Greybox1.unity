@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 82f94688ec5ea1b478bd1342af290879
+  m_OcclusionCullingData: {fileID: 36300000, guid: 88dd567282a613d48afcf5db35fde579,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -1172,6 +1173,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -4637,6 +4642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -4804,6 +4813,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -6730,6 +6743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7395,6 +7412,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -8411,6 +8432,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -10353,6 +10378,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -15430,6 +15459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2_window (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -15592,6 +15625,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -16845,6 +16882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 113
@@ -17196,6 +17237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2_door
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24649b3c37e4a491abf8ef731ffbd5df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24649b3c37e4a491abf8ef731ffbd5df, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -17270,6 +17315,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -18455,6 +18504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -18717,6 +18770,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -23566,6 +23623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 114
@@ -24690,6 +24751,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
       propertyPath: m_Name
       value: greek_wall_2_window
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
       propertyPath: m_RootOrder
@@ -26058,6 +26123,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -27444,6 +27513,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -29273,6 +29346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2_door
       objectReference: {fileID: 0}
+    - target: {fileID: 1420324087030478, guid: db1a4c8ae12944144b7a56b1adb279c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4104874642677650, guid: db1a4c8ae12944144b7a56b1adb279c7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -29920,6 +29997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 102
@@ -29984,6 +30065,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -30371,6 +30456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 105
@@ -30595,6 +30684,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -30965,6 +31058,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -32330,6 +32427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
       value: 104
@@ -32463,6 +32564,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -34000,6 +34105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: greek_wall_2_window (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdae47c1ddf3049358f11421fa3be74b, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -34161,6 +34270,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -35534,6 +35647,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_Name
       value: greek_wall_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1367657d847b445c9c29ab1d32aaf45, type: 3}
       propertyPath: m_RootOrder
@@ -45444,6 +45561,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RepeatPortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870699063725446332, guid: a688e745956dcb947bcbdf94ef195832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870699063725446334, guid: a688e745956dcb947bcbdf94ef195832,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a688e745956dcb947bcbdf94ef195832, type: 3}

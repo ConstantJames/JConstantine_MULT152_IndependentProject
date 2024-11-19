@@ -19,6 +19,7 @@ public class Script_EnemyWaves : MonoBehaviour
     int maxWaves = 4;
     GameObject walls;
     GameObject portal;
+    public bool waveWork = true;
 
 
     // Start is called before the first frame update
@@ -40,10 +41,6 @@ public class Script_EnemyWaves : MonoBehaviour
                 Instantiate(enemyPrefab, GetRandomPositionInCollider(), enemyPrefab.transform.rotation);
                 
             }
-            if (waveNum == maxWaves)
-            {
-                WaveEnd();
-            }
         }
     }
 
@@ -51,12 +48,19 @@ public class Script_EnemyWaves : MonoBehaviour
     void Update()
     {
         enemyCount = FindObjectsOfType<Script_EnemyHealth>().Length;
-        if (enemyCount == 0 && firstTime == true )
+        if (enemyCount == 0 && firstTime == true && waveWork == true)
         {
             int enemyNum = (int)Mathf.Pow(2, waveNum);
             SpawnWave(enemyNum);
             waveNum++;
-
+        }
+        else if (enemyCount == 0 && waveWork == false)
+            {
+                WaveEnd();
+            }
+        if (waveNum == maxWaves)
+        {
+            waveWork = false;
         }
     }
 
@@ -71,6 +75,7 @@ public class Script_EnemyWaves : MonoBehaviour
                 int enemyNum = (int)Mathf.Pow(1, waveNum);
                 SpawnWave(enemyNum);
                 firstTime = true;
+                waveWork = true;
                 walls.SetActive(true);
             }
         }

@@ -43,6 +43,7 @@ public class Script_EnemyAim : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             InvokeRepeating("PlayerInRange", 1, 3);
+            fire = true;
         }
 
     }
@@ -65,6 +66,7 @@ public class Script_EnemyAim : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         fire = false;
+        CancelInvoke("PlayerInRange");
     }
 
     void PlayerInRange()
