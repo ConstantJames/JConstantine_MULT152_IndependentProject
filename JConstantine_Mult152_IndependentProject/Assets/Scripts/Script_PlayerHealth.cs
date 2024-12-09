@@ -39,7 +39,7 @@ public class Script_PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag("Ouch"))
         {
             print("WORKING");
-            gameManager.UpdateHealthHUD(health);
+            
         }
 
         if (health <= 1 && other.gameObject.CompareTag("Ouch"))
@@ -48,7 +48,6 @@ public class Script_PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
             gameManager.gameOver = true;
             animator.Play("Dead");
-            gameManager.UpdateHealthHUD(health);
 
         }
         else if (health > 1 && other.gameObject.CompareTag("Ouch"))
@@ -56,8 +55,7 @@ public class Script_PlayerHealth : MonoBehaviour
             health--;
             Destroy(other.gameObject);
             animator.Play("Ouch");
-            gameManager.UpdateHealthHUD(health);
-            print("DAMAGED");
+
         }
         if (other.gameObject.CompareTag("Health"))
         {
@@ -65,9 +63,7 @@ public class Script_PlayerHealth : MonoBehaviour
             print(amount);
             health = amount + health;
             Destroy(other.gameObject);
-            gameManager.UpdateHealthHUD(health);
         }
-        
     }
     private void OnTriggerExit(Collider other)
     {

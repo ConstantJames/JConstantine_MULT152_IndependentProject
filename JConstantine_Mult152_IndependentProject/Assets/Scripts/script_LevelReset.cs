@@ -7,7 +7,6 @@ public class script_LevelReset : MonoBehaviour
     public GameObject[] enemies; // Array to hold all enemy prefabs
     public Transform player; // Reference to the player
     public Vector3 playerStartPosition; // Player's starting position
-    public Quaternion playerStartRotation;
     public GameObject[] objectsToEnable; // Array of objects to enable
     public GameManager gameManager;
     public bool active = false;
@@ -21,7 +20,6 @@ public class script_LevelReset : MonoBehaviour
     {
         // Store the player's starting position
         playerStartPosition = player.position;
-        playerStartRotation = player.transform.rotation;
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
@@ -43,16 +41,14 @@ public class script_LevelReset : MonoBehaviour
 
         // Place the player back at the start
         player.position = playerStartPosition;
-        player.transform.rotation = playerStartRotation;
-        //Keeps track of repeats
-       
-        numRepeat++;
 
+        //Keeps track of repeats
+        numRepeat++;
         gameManager.Repeat(numRepeat);
         enNewHealth = startEnHealth * numRepeat;
         waveMan.GetComponent<Script_EnemyWaves>().firstTime = false;
         waveMan.GetComponent<Script_EnemyWaves>().waveNum = 0;
-        gameManager.StartGame();
+
         // Enable all objects that were disabled at the start
         foreach (GameObject obj in objectsToEnable)
         {
@@ -66,24 +62,9 @@ public class script_LevelReset : MonoBehaviour
         gameManager = gameManager.GetComponent<GameManager>();
         if ( other.gameObject.CompareTag("Player") &&  active == true)
         {
-            if (numRepeat <= 1)
-            {
-                gameManager.VictoryScreen();
-            }
-            else
-            {
-                ResetLevel();
-            }
-        }
-        else if (other.gameObject.CompareTag("Player"))
-        {
-            gameManager.middleScreenText.text = "Find all 3 scrolls to use the portal.";
-        }
-    }
+            ResetLevel();
 
-    private void OnTriggerExit(Collider other)
-    {
-        gameManager.middleScreenText.text = "";
+        }
     }
 
 }

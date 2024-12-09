@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-    GameManager gameManager;
+    
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
 
     // Update is called once per frame
@@ -19,12 +19,6 @@ public class Collect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            gameManager.UpdateScrollsHUD(1);
-            Destroy(gameObject);
-        }
-
+        Destroy(gameObject);
     }
 }

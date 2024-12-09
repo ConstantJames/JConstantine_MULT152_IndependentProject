@@ -28,7 +28,6 @@ public class Script_EnemyHealth : MonoBehaviour
         sHealth = eHealth;
         animator = GetComponent<Animator>();
         gameManager = GetComponent<GameManager>();
-        rCount = 1;
     }
 
     // Update is called once per frame
