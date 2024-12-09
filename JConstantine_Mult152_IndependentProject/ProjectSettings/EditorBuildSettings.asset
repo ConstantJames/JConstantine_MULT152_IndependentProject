@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+=======
+    path: Assets/Scenes/Scene_Greybox1.unity
+    guid: 82f94688ec5ea1b478bd1342af290879
+>>>>>>> parent of 34772a7 (Revert "More stuff")
   m_configObjects: {}
