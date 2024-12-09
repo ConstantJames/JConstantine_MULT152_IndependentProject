@@ -13,17 +13,19 @@ public class Script_WeaponPicker : MonoBehaviour
     public GameManager gameManager;
     private bool gameOver;
     private GameObject walls;
+    private int enemyCount;
 
     void Start()
     {
         walls = GameObject.Find("MagicDoors");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
         gameOver = GameObject.Find("GameManager").GetComponent<GameManager>().gameOver;
-
+        enemyCount = FindObjectsOfType<Script_EnemyHealth>().Length;
         if (Input.GetKeyDown("1"))
         {
             if (!gameOver)
@@ -41,7 +43,7 @@ public class Script_WeaponPicker : MonoBehaviour
             }
         }
     }
-    void ChangeWeapon (int num)
+    public void ChangeWeapon (int num)
     {
         currentWeapon = num;
         for (int i = 0; i < weapons.Length; i++)
@@ -57,7 +59,14 @@ public class Script_WeaponPicker : MonoBehaviour
             unlock = true;
             print("NEW SPELL UNLOCKED");
             Destroy(other.gameObject);
-            walls.SetActive(false);
+            StartCoroutine(NewWeapon());
         }
+    }
+
+    public IEnumerator NewWeapon()
+    {
+        gameManager.middleScreenText.text = "NEW WEAPON UNLOCKED. PRESS 2";
+        yield return new WaitForSeconds(2f);
+        gameManager.middleScreenText.text = "";
     }
 }

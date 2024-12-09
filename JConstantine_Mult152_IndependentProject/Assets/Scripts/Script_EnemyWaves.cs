@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Script_EnemyWaves : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Script_EnemyWaves : MonoBehaviour
     GameObject walls;
     GameObject portal;
     public bool waveWork = true;
+    public TextMeshProUGUI wavecounter;
+    private bool oneEnd = false;
+
 
 
     // Start is called before the first frame update
@@ -28,10 +32,12 @@ public class Script_EnemyWaves : MonoBehaviour
         spawnArea = GetComponent<Collider>();
         walls = GameObject.Find("MagicDoors");
         portal = GameObject.Find("RepeatPortal");
+        wavecounter.text = "";
     }
 
     void SpawnWave(int enemyNum)
     {
+        wavecounter.text = "WAVE: " + (waveNum + 1);
         for (int x = 0; x < enemyNum; x++)
         {
             
@@ -77,6 +83,7 @@ public class Script_EnemyWaves : MonoBehaviour
                 firstTime = true;
                 waveWork = true;
                 walls.SetActive(true);
+                wavecounter.text = "WAVE: " + waveNum;
             }
         }
     }
@@ -95,8 +102,13 @@ public class Script_EnemyWaves : MonoBehaviour
 
     void WaveEnd()
     {
-        Debug.Log("Waves Over");
-        walls.SetActive(false);
-        portal.SetActive(true);
+        if (oneEnd == false)
+        {
+            Debug.Log("Waves Over");
+            walls.SetActive(false);
+            portal.SetActive(true);
+            wavecounter.text = "";
+            oneEnd = true;
+        }
     }
 }

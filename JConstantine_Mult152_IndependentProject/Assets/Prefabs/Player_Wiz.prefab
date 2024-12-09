@@ -224,8 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c21a8464ad01a4fae921e736cc6dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
+  health: 11
+  maxHealth: 11
   amount: 0
   enemy:
   - {fileID: 3806135040117536842, guid: fc1ac0a4813aea54987fdd5a482b8bb2, type: 3}

@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     //Jump Timer
     public float buttonTime = 0.3f;
     private bool onGround = true;
-    public float gravityModifier;
+
     public float jumpForce;
 
 
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rbPlayer = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
+
     }
 
     // Update is called once per frame
@@ -125,5 +125,11 @@ else
             onGround = true;
         }
         
+        if(collision.gameObject.CompareTag("Collision"))
+        {
+            transform.Translate(Vector3.back * Time.deltaTime * playerSpeed * verticalInput);
+        }
+
     }
+
 }

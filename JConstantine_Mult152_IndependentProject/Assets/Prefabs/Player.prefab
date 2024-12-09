@@ -185,11 +185,11 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4075804641616849217}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 1.5
   m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 2
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c21a8464ad01a4fae921e736cc6dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  maxHealth: 10
+  health: 11
+  maxHealth: 11
   amount: 0
   enemy:
   - {fileID: 3806135040117536842, guid: fc1ac0a4813aea54987fdd5a482b8bb2, type: 3}
@@ -246,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7777961581247409533, guid: 205d8766bc2e07d47b8e2970e39d820c, type: 3}
   buttonTime: 0.3
-  gravityModifier: 2
   jumpForce: 15
   rollForce: 45
   camSpeed: 1000
